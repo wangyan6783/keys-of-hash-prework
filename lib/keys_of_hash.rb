@@ -2,7 +2,7 @@ class Hash
   def keys_of(*arguments)
     arr = []
     self.each { |key, value|
-      if value == arguments
+      if arguments.include?(value)
         arr << key
       end
     }
